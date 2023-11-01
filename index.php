@@ -2,7 +2,7 @@
 
     require_once 'lib/poll.php';
     
-    $polls = getPolls($pdo);
+    $polls = getPolls($pdo, HOME_POLLS_LIMIT);
     
     ?>
 
@@ -23,6 +23,7 @@
     <div class="row text-center">
         <h2>Les derniers sondages :</h2>
         <?php foreach($polls as $poll){
+         
           require 'templates/poll_part.php';
         } ?>
         
